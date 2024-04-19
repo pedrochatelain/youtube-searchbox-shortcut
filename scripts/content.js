@@ -3,9 +3,10 @@ document.addEventListener("DOMContentLoaded", init());
 function init() {
 
   const searchBox = document.querySelector('#search-input').firstChild;
+  const shortcutKey = 'y';
   
   document.addEventListener('keydown', (event) => {
-    if (event.key.toLowerCase() === 'y') {
+    if (event.key.toLowerCase() === shortcutKey) {
       event.preventDefault();
       if ( ! isFullscreen()) {
         searchBox.focus();
